@@ -9,9 +9,11 @@
 
 <body>
   <header class="header">
-    <a class="logo logo--cata">DEVICE</a>
+    <div class="header_logo">
+    <a class="logo logo--header">DEVICE</a>
+  </div>
     <!-- Форма поиска -->
-    <div class="menu-user--header">
+    <div class="menu-user menu-user--header">
       <ul class="menu-user__items">
         <li class="menu-user__item"><a class="menu-user__link" href="#">Валентин Петухов</a></li>
         <li class="menu-user__item"><a class="menu-user__link" href="#">Выйти</a></li>
@@ -20,9 +22,9 @@
       </ul>
     </div>
 
-    <nav class="nav-main--header">
-      <ul class="nav-main__items">
-        <li class="nav-main__item catalog"><a class="nav-main__link" href="#">Каталог товаров</a>
+    <nav class="main-nav main-nav--header">
+      <ul class="main-nav__items">
+        <li class="main-nav__item catalog"><a class="main-nav__link" href="#">Каталог товаров</a>
           <div class="submenu">
             <ul class="submenu__items">
               <li class="submenu__item"><a class="submenu__link" href="#">Виртуальная реальность</a></li>
@@ -35,20 +37,20 @@
           </div>
         </li>
 
-        <li class="nav-main__item"><a class="nav-main__link" href="#">Доставка</a></li>
-        <li class="nav-main__item"><a class="nav-main__link" href="#">Гарантия</a></li>
-        <li class="nav-main__item"><a class="nav-main__link" href="#">Контакты</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="#">Доставка</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="#">Гарантия</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="#">Контакты</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="content--catalog">
+  <main class="content content--catalog">
     <h1>Моноподы для селфи</h1>
-    <nav class="breadcrumbs">
+    <div class="breadcrumbs">
       <a href="index.html" class="breadcrumbs__link">Главная</a>
       <a href="#" class="breadcrumbs__link">Каталог товаров</a>
-      <span class="breadcrumbs__current">Моноподы для селфи</span>
-    </nav>
+      <a href="" class="breadcrumbs__current">Моноподы для селфи</a>
+    </div>
     <div class="catalog-wrapper">
       <section class="filter">
         <h2>Фильтр:</h2>
@@ -75,7 +77,7 @@
             <li class="goods__item">
               <img src="img/product1.jpg" width="100" height="100" alt="Любительская селфи-палка">
               <div class="goods__item-info">
-                <h3 class="goods__item-title"><a href="#">Любительская селфи-палка</a></h3>
+                <h3 class="goods__item-title">Любительская селфи-палка</a></h3>
                 <span class="goods__item-price">500 руб.</span>
               </div>
               <div class="goods__item-hover">
@@ -137,7 +139,7 @@
   <footer class="footer">
     <div class="footer__user-menu">
       <a class="footer__logo logo--footer" href="index.html">Device</a>
-      <div class="user-menu--footer">
+      <div class="user-menu user-menu--footer">
         <ul class="user-menu__items">
           <li class="user-menu__item "><a class="user-menu__item__link" href="#">Выйти</a></li>
           <li class="user-menu__item"><a class="user-menu__item__link" href="#">Сравнить</a></li>
@@ -149,11 +151,11 @@
 
     <div class="footer__info">
       <span class="footer__address">г. Москва, ул. Строителей, 15</span>
-      <nav class="nav--footer">
-        <ul class="nav__items">
-          <li class="nav__item"><a class="nav__link" href="#">Доставка</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">Гарантия</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
+      <nav class="main-nav main-nav--footer">
+        <ul class="main-nav__items">
+          <li class="main-nav__item"><a class="main-nav__link" href="#">Доставка</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">Гарантия</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">Контакты</a></li>
         </ul>
       </nav>
       <a href="tel:+74954959595" class="footer__contact">Тел.: +7 (495) 495-95-95</a>
