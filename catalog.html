@@ -10,9 +10,15 @@
 <body>
   <header class="header">
     <div class="header_logo">
-    <a class="logo logo--header">DEVICE</a>
-  </div>
-    <!-- Форма поиска -->
+      <a class="logo logo--header">DEVICE</a>
+    </div>
+    <div class="header__search">
+      <form action="https://echo.htmlacademy.ru" class="form-search">
+        <label for="search" class="visually-hidden">Поиск по сайту</label>
+        <input id="search" class="form-search__input" type="search" placeholder="Поиск по сайту">
+        <button class="form-search__btn" type="submit">Найти</button>
+      </form>
+    </div>
     <div class="menu-user menu-user--header">
       <ul class="menu-user__items">
         <li class="menu-user__item"><a class="menu-user__link" href="#">Валентин Петухов</a></li>
@@ -54,12 +60,51 @@
     <div class="catalog-wrapper">
       <section class="filter">
         <h2>Фильтр:</h2>
-        <!--форма фильтра-->
+        <form class="filter__form" action="https://echo.htmlacademy.ru" method="get">
+          <fieldset class="filter__group filter__group--cost">
+            <legend class="filter__name">Стоимость</legend>
+            <div class="filter__range">
+              <span class="filter__range-left"></span>
+              <span class="filter__range-right"></span>
+            </div>
+            <div class="filter__cost-equal">
+              <label for="cost-from">от</label>
+              <input type="text" id="cost-from" name="cost-from" value="0">
+              <label for="cost-to">до</label>
+              <input type="text" id="cost-to" name="cost-to" value="5000">
+            </div>
+          </fieldset>
+          <fieldset class="filter__group filter__group--color">
+            <legend class="filter__name">Цвет</legend>
+            <div class="filter__options">
+              <input class="filter__checkbox" type="checkbox" id="black" name="black" checked>
+              <label for="black" class="filter__option" tabindex="0">Черный</label>
+              <input class="filter__checkbox" type="checkbox" id="white" name="white">
+              <label for="white" class="filter__option" tabindex="0">Белый</label>
+              <input class="filter__checkbox" type="checkbox" id="blue" name="blue" checked>
+              <label for="blue" class="filter__option" tabindex="0">Синий</label>
+              <input class="filter__checkbox" type="checkbox" id="red" name="red" checked>
+              <label for="red" class="filter__option" tabindex="0">Красный</label>
+              <input class="filter__checkbox" type="checkbox" id="rose" name="rose">
+              <label for="rose" class="filter__option" tabindex="0">Розовый</label>
+            </div>
+          </fieldset>
+          <fieldset class="filter__group filter__group--bluetooth">
+            <legend class="filter__name">Bluetooth</legend>
+            <div class="filter__list-options">
+              <input class="filter__radio" type="radio" id="bt-y" name="bt" checked>
+              <label for="btn-yes" class="filter__option" tabindex="0">Есть</label>
+              <input class="filter__radio" type="radio" id="bt-n" name="bt">
+              <label for="btn-no" class="filter__option" tabindex="0">Нет</label>
+            </div>
+          </fieldset>
+          <button class="filter__btn btn" type="submit">Показать</button>
+        </form>
       </section>
 
       <section class="catalog-list">
         <div class="sort">
-          <h2 class="sort__title">Сортировка:</h2>
+          <h2 class="title">Сортировка:</h2>
           <div class="sort__crit">
             <a class="sort__crit-item sort__crit-item--current " href="#">По цене</a>
             <a class="sort__crit-item" href="#">По типу</a>
@@ -78,8 +123,8 @@
               <img src="img/product1.jpg" width="100" height="100" alt="Любительская селфи-палка">
               <div class="goods__item-info">
                 <a href="#">
-                <h3 class="goods__item-title">Любительская селфи-палка</h3>
-                <span class="goods__item-price">500 руб.</span>
+                  <h3 class="goods__item-title">Любительская селфи-палка</h3>
+                  <span class="goods__item-price">500 руб.</span>
                 </a>
               </div>
               <div class="goods__item-hover">
@@ -91,8 +136,8 @@
               <img src="img/product2.jpg" width="100" height="100" alt="Профессиональная селфи-палка">
               <div class="goods__item-info">
                 <a href="#">
-                <h3 class="goods__item-title">Профессиональная селфи-палка</h3>
-                <span class="goods__item-price">1 500 руб.</span>
+                  <h3 class="goods__item-title">Профессиональная селфи-палка</h3>
+                  <span class="goods__item-price">1 500 руб.</span>
                 </a>
               </div>
               <div class="goods__item-hover">
@@ -104,8 +149,8 @@
               <img src="img/product3.jpg" width="100" height="100" alt="Непотопляемая селфи-палка">
               <div class="goods__item-info">
                 <a href="#">
-                <h3 class="goods__item-title">Непотопляемая селфи-палка</h3>
-                <span class="goods__item-price">2 500 руб.</span>
+                  <h3 class="goods__item-title">Непотопляемая селфи-палка</h3>
+                  <span class="goods__item-price">2 500 руб.</span>
                 </a>
               </div>
               <div class="goods__item-hover">
@@ -117,8 +162,8 @@
               <img src="img/product4.jpg" width="100" height="100" alt="Селфи-палка &laquo;Следуй за мной&raquo;">
               <div class="goods__item-info">
                 <a href="#">
-                <h3 class="goods__item-title">Селфи-палка &laquo;Следуй за мной&raquo;</h3>
-                <span class="goods__item-price">4 900 руб.</span>
+                  <h3 class="goods__item-title">Селфи-палка &laquo;Следуй за мной&raquo;</h3>
+                  <span class="goods__item-price">4 900 руб.</span>
                 </a>
               </div>
               <div class="goods__item-hover">

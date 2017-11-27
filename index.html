@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -11,7 +13,13 @@
     <div class="header__logo">
       <a class="logo logo--header">DEVICE</a>
     </div>
-    <!-- Форма поиска -->
+    <div class="header__search">
+      <form action="https://echo.htmlacademy.ru" class="form-search">
+        <label for="search" class="visually-hidden">Поиск по сайту</label>
+        <input id="search" class="form-search__input" type="search" placeholder="Поиск по сайту">
+        <button class="form-search__btn" type="submit">Найти</button>
+      </form>
+    </div>
     <div class="menu-user menu-user--header">
       <ul class="menu-user__items">
         <li class="menu-user__item"><a class="menu-user__link" href="#">Войти</a></li>
@@ -46,7 +54,14 @@
     <h1 class="visually-hidden">Интернет-магазин гаджетов «DEVICE»</h1>
     <section class="popular-slider">
       <h2 class="visually-hidden">Популярные товары</h2>
-      <!-- тут будет переключалка слайдеров-->
+      <input class="popular-slider__radio-btn" type="radio" name="toggle" id="slide1" checked>
+      <input class="popular-slider__radio-btn" type="radio" name="toggle" id="slide2">
+      <input class="popular-slider__radio-btn" type="radio" name="toggle" id="slide3">
+      <div class="popular-slider__controls">
+        <label for="slide1" class="popular-slider__control" tabindex="0"><span class="visually-hidden">Палка для селфи</span></label>
+        <label for="slide2" class="popular-slider__control" tabindex="0"><span class="visually-hidden">Фитнес-браслет</span></label>
+        <label for="slide3" class="popular-slider__control" tabindex="0"><span class="visually-hidden">Квадрокоптер</span></label>
+      </div>>
       <div class="popular-slider__wrapper">
         <div class="popular-slider__item--slide1">
           <span class="popular-slider__number">01</span>
@@ -174,7 +189,15 @@
       <h2 class="visually-hidden">Услуги</h2>
       <div class="services__wrapper">
 
-        <!-- тут будет переключалка слайдеров-->
+        <input class="services__radio-btn" type="radio" name="tab" id="tab1" checked>
+        <input class="services__radio-btn" type="radio" name="tab" id="tab1">
+        <input class="services__radio-btn" type="radio" name="tab" id="tab1">
+
+        <div class="services__controls">
+          <label for="tab1" class="services__control btn" tabindex="0">Доставка</label>
+          <label for="tab2" class="services__control btn" tabindex="0">Гарантия</label>
+          <label for="tab3" class="services__control btn" tabindex="0">Кредит</label>
+        </div>
 
         <div class="services__items">
           <div class="services__item services__item--delivery">
@@ -196,10 +219,10 @@
     <section class="logotypes">
       <h2 class="visually-hidden">Производители</h2>
       <div class="logotypes__items">
-        <a class="logotypes__link logotypes__link--logo1" href="#"><img src="img/logo1.png" alt="DJI"></a>
-        <a class="logotypes__link logotypes__link--logo2" href="#"><img src="img/logo2.png" alt="SP-Gadgets"></a>
-        <a class="logotypes__link logotypes__link--logo3" href="#"><img src="img/logo3.png" alt="GoPro"></a>
-        <a class="logotypes__link logotypes__link--logo4" href="#"><img src="img/logo4.png" alt="Vive"></a>
+        <a class="logotypes__link logotypes__link--logo1" href="#"><img src="img/logo1.jpg" alt="DJI"></a>
+        <a class="logotypes__link logotypes__link--logo2" href="#"><img src="img/logo2.jpg" alt="SP-Gadgets"></a>
+        <a class="logotypes__link logotypes__link--logo3" href="#"><img src="img/logo3.jpg" alt="GoPro"></a>
+        <a class="logotypes__link logotypes__link--logo4" href="#"><img src="img/logo4.jpg" alt="Vive"></a>
       </div>
     </section>
     <section class="info">
@@ -262,9 +285,25 @@
   </footer>
 
   <div class="popup-map">
+    <button class="map__close" type="button"><span class="visually-hidden">Закрыть</span></button>
+    <iframe></iframe>
 
   </div>
   <div class="popup-feedback">
+    <button class="popup-feedback__close" type="button"><span class="visually-hidden">Закрыть</span></button>
+    <form class="popup-feedback__form" action="https://echo.htmlacademy.ru" method="post">
+      <div class="popup-feedback__line">
+        <label class="popup-feedback__label">Ваше имя:
+          <input type="text" class="popup-feedback__field" name="username" placeholder="Представьтесь, пожалуйста">
+        </label>
+        <label class="popup-feedback__label">Ваш e-mail:
+          <input type="email" class="popup-feedback__field" name="useremail" placeholder="Для отправки ответа">
+        </label>
+      </div>
+      <label for="letter" class="popup-feedback__label">Текст письма:</label>
+      <textarea class="popup-feedback__letter" name="letter" id="letter" cols="25" rows="7" placeholder="В свободной форме"></textarea>
+      <button type="submit" class="popup-feedback__btn btn" name="submit">Отправить</button>
+    </form>
 
   </div>
 
