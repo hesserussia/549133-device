@@ -138,7 +138,7 @@ a:active {
   display: none;
 }
 
-/* header*/
+/*Шапка и логотип*/
 
 .header {
   width: 1160px;
@@ -156,3 +156,148 @@ a:active {
                     #fff 328px,
                     #fff 100%);
   }
+
+  .logo {
+  position: absolute;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 55px;
+  letter-spacing: 0.5px;
+  color: #000;
+  text-transform: uppercase;
+  top: 0;
+  left: 58px;
+}
+
+.logo:hover {
+  opacity: 0.6;
+}
+
+.logo:active {
+  opacity: 0.3;
+}
+
+/* Меню и навигация */
+
+.control {
+  display: flex;
+  margin: 42px 0 15px 0;
+  padding: 0 60px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-user {
+  margin: 0;
+  padding: 0;
+  width: 498px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.menu-user__items {
+  list-style: none;
+}
+
+.sign {
+  width: 280px;
+  margin: 0;
+  margin-right: auto;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+}
+
+.menu-user__item {
+  margin-right: 37px;
+  padding-left: 25px;
+  position: relative;
+  font-size: 15px;
+  line-height: 36px;
+}
+
+.menu-user__item:last-child {
+  margin-right: 0;
+}
+
+.menu-user__item--search {
+  margin-right: auto;
+}
+
+.menu-user__item--profile {
+  margin: 0;
+}
+
+.menu-user__item--logout {
+  padding-left: 20px;
+}
+
+.menu-user__item--logout .menu-user__link {
+  opacity: 0.3;
+}
+
+.menu-user__item--logout .menu-user__link:hover {
+  opacity: 0.6;
+}
+
+.menu-user__item--logout .menu-user__link:active {
+  opacity: 1;
+}
+
+.menu-user__item::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 0;
+  cursor: pointer;
+}
+
+.menu-user__item--search::before {
+  top: 18px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/search.svg");
+  background-repeat: no-repeat;
+}
+
+.menu-user__item--login::before,
+.menu-user__item--profile::before {
+  width: 13px;
+  height: 12px;
+  background-image: url("../img/user.svg");
+  background-repeat: no-repeat;
+}
+
+.menu-user__item--compare::before {
+  top: 14px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  background-image: url("../img/compare.svg");
+  background-repeat: no-repeat;
+}
+
+.menu-user__item--backet::before {
+  top: 13px;
+  left: 3px;
+  width: 12px;
+  height: 12px;
+  background-image: url("../img/cart.svg");
+  background-repeat: no-repeat;
+}
+
+.menu-user__item:hover::before {
+  opacity: 0.6;
+}
+
+.menu-user__item:active::before {
+  opacity: 0.3;
+}
+
+.form-search {
+  display: flex;
+}
