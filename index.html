@@ -10,11 +10,9 @@
 
 <body>
   <header class="header">
-    <div class="header__logo">
-      <a class="logo logo--header">DEVICE</a>
-    </div>
+    <a class="logo logo--header">DEVICE</a>
     <div class="control">
-      <div class="header__search">
+      <div class="control__item control__item--search">
         <form action="https://echo.htmlacademy.ru" class="form-search">
           <label for="search" class="visually-hidden">Поиск по сайту</label>
           <input id="search" class="form-search__input" type="search" placeholder="Поиск по сайту">
@@ -25,14 +23,15 @@
         <ul class="menu-user__items">
           <li class="menu-user__item menu-user__item--login"><a class="menu-user__link" href="#">Войти</a></li>
           <li class="menu-user__item menu-user__item--compare"><a class="menu-user__link" href="#">Сравнить</a></li>
-          <li class="menu-user__item menu-user__item--basket"><a class="menu-user__link" href="#">Корзина</a></li>
+          <li class="menu-user__item menu-user__item--backet"><a class="menu-user__link" href="#">Корзина</a></li>
         </ul>
       </div>
     </div>
 
     <nav class="main-nav main-nav--header">
       <ul class="main-nav__items">
-        <li class="main-nav__item catalog"><a class="main-nav__link" href="#">Каталог товаров</a>
+        <li class="main-nav__item catalog">
+          <a class="main-nav__link" href="#">Каталог товаров</a>
           <div class="submenu">
             <ul class="submenu__items">
               <li class="submenu__item"><a class="submenu__link" href="#">Виртуальная реальность</a></li>
@@ -45,9 +44,9 @@
           </div>
         </li>
 
-        <li class="nav-main__item"><a class="nav-main__link" href="#">Доставка</a></li>
-        <li class="nav-main__item"><a class="nav-main__link" href="#">Гарантия</a></li>
-        <li class="nav-main__item"><a class="nav-main__link" href="#">Контакты</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="#">Доставка</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="#">Гарантия</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="#">Контакты</a></li>
       </ul>
     </nav>
   </header>
@@ -56,19 +55,18 @@
     <h1 class="visually-hidden">Интернет-магазин гаджетов «DEVICE»</h1>
     <section class="popular-slider">
       <h2 class="visually-hidden">Популярные товары</h2>
-      <input class="popular-slider__radio-btn" type="radio" name="toggle" id="slide1" checked>
-      <input class="popular-slider__radio-btn" type="radio" name="toggle" id="slide2">
-      <input class="popular-slider__radio-btn" type="radio" name="toggle" id="slide3">
+      <input class="popular-slider__radio-btn" type="radio" id="slide1" checked>
+      <input class="popular-slider__radio-btn" type="radio" id="slide2">
+      <input class="popular-slider__radio-btn" type="radio" id="slide3">
       <div class="popular-slider__controls">
         <label for="slide1" class="popular-slider__control" tabindex="0"><span class="visually-hidden">Палка для селфи</span></label>
         <label for="slide2" class="popular-slider__control" tabindex="0"><span class="visually-hidden">Фитнес-браслет</span></label>
         <label for="slide3" class="popular-slider__control" tabindex="0"><span class="visually-hidden">Квадрокоптер</span></label>
       </div>
       <div class="popular-slider__wrapper">
-        <div class="popular-slider__item--slide1">
-          <span class="popular-slider__number">01</span>
+        <div class="popular-slider__item popular-slider__item--slide1">
           <div class="popular-slider__image">
-            <img src="img/slide1.png" alt="Палка для селфи" width="100" height="100">
+            <img src="img/slide1.png" alt="Палка для селфи" width="384px" height="486px">
           </div>
           <div class="popular-slider__info">
             <h3 class="popular-slider__title title">Делай селфи, как Бен Стиллер!</h3>
@@ -89,10 +87,9 @@
           </div>
         </div>
 
-        <div class="popular-slider__item--slide2">
-          <span class="popular-slider__number">02</span>
+        <div class="popular-slider__item popular-slider__item--slide2">
           <div class="popular-slider__image">
-            <img src="img/slide2.png" alt="Фитнес-браслет" width="100" height="100">
+            <img src="img/slide2.png" alt="Фитнес-браслет" width="345px" height="485px">
           </div>
           <div class="popular-slider__info">
             <h3 class="popular-slider__title title">Худеем<br> правильно!</h3>
@@ -109,10 +106,10 @@
           </div>
         </div>
 
-        <div class="popular-slider__item--slide3">
+        <div class="popular-slider__item popular-slider__item--slide3">
           <span class="popular-slider__number">03</span>
           <div class="popular-slider__image">
-            <img src="img/slide3.png" alt="Квадрокоптер" width="100" height="100">
+            <img src="img/slide3.png" alt="Квадрокоптер" width="526px" height="334px">
           </div>
           <div class="popular-slider__info">
             <h3 class="popular-slider__title title">Порхает как бабочка, жалит как пчела!</h3>

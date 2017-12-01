@@ -105,6 +105,7 @@ a:active {
     text-transform: uppercase;
     text-align: center;
     padding: 10px 42px;
+    z-index: 10;
 }
 
 .btn::before {
@@ -117,6 +118,7 @@ a:active {
   background-color: #f0c52e;
   transform: translateY(-50%);
   transition: height 0.2s;
+  z-index: 5;
 }
 
 .btn:hover::before,
@@ -170,6 +172,16 @@ a:active {
   left: 58px;
 }
 
+.logo--header {
+  top: 0;
+  left: 58px;
+}
+
+.logo--catalog {
+  top: 3px;
+  left: 58px;
+}
+
 .logo:hover {
   opacity: 0.6;
 }
@@ -191,7 +203,7 @@ a:active {
 .menu-user {
   margin: 0;
   padding: 0;
-  width: 498px;
+  width: 280px;
   display: flex;
   justify-content: space-between;
   list-style: none;
@@ -200,7 +212,7 @@ a:active {
 .menu-user__items {
   margin: 0;
   padding: 0;
-  width: 498px;
+  width: 280px;
   display: flex;
   justify-content: space-between;
   list-style: none;
@@ -295,6 +307,65 @@ a:active {
 
 .form-search {
   display: flex;
+}
+
+.form-search__btn {
+  width: 84px;
+  height: 47px;
+  margin-left: -4px;
+  color: #F7E296;
+  border: none;
+  background-color: #F7E296;
+  cursor: none;
+  position: relative;
+}
+
+.form-search__btn::after {
+  content: "";
+  width: 350px;
+  height: 1px;
+  position: absolute;
+  top: 42px;
+  left: -350px;
+  border-bottom: 2px solid transparent;
+}
+
+.form-search__input {
+  width: 330px;
+  height: 47px;
+  padding-left: 15px;
+  font-size: 15px;
+  line-height: 36px;
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #F7E296;
+  border: none;
+}
+
+.form-search__input:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.form-search__input:focus {
+  color: #000;
+}
+
+.form-search__input:focus + .form-search__btn {
+  color: #000;
+  border: 2px solid #000;
+  cursor: pointer;
+}
+
+.form-search__input:focus + .form-search__btn::after {
+  border-bottom: 2px solid #000;
+}
+
+.form-search__input:focus + .form-search__btn:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+.form-search__input:focus + .form-search__btn:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .main-nav__items {
@@ -481,7 +552,7 @@ a:active {
 }
 
 #slide1:checked ~ .popular-slider__wrapper .popular-slider__item--slide1,
-#slide2:checked ~ .popular-slider__wrapper .spopular-slider__item--slide2,
+#slide2:checked ~ .popular-slider__wrapper .popular-slider__item--slide2,
 #slide3:checked ~ .popular-slider__wrapper .popular-slider__item--slide3 {
   display: flex;
   order: 20;
