@@ -1814,17 +1814,7 @@ a:active {
   background-size: cover;
 }
 
-.popup-map--show,
-.popup-feedback--show {
-  transform: scale(1);
-  opacity: 1;
-}
 
-.popup-feedback--error .popup-feedback__field,
-.popup-feedback--error .popup-feedback__letter {
-  background-color: #F6DADA;
-  color: rgba(0, 0, 0, 0.4);
-}
 
 .popup-feedback__line {
   display: flex;
