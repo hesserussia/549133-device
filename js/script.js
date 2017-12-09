@@ -1,10 +1,3 @@
-/*
-
-var userName = popup.querySelector("[name=username]");
-var email = popup.querySelector("[name=useremail]");
-var storage = localStorage.getItem("userName");
-*/
-
 var mapLink = document.querySelector(".contacts__map");
 var mapPopup = document.querySelector(".popup-map");
 var mapClose = document.querySelector(".popup-map__close");
