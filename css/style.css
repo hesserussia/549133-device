@@ -814,6 +814,12 @@ a:active {
           justify-content: center;
 }
 
+.catalog-category__img-wrapper--correction {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 .catalog-category__link {
   width: 160px;
   display: -webkit-box;
@@ -840,6 +846,7 @@ a:active {
 }
 
 .catalog-category__name {
+  margin: 0;
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 800;
