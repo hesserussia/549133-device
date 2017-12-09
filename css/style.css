@@ -159,7 +159,7 @@ a:active {
                     #fff 100%);
   }
 
-  .header--page {
+  .header--catalog {
     height: 373px;
     background-image: linear-gradient(to bottom,
                       transparent 0,
@@ -209,28 +209,29 @@ a:active {
   padding: 0 60px;
   justify-content: space-between;
   align-items: center;
-  outline: 1px solid #666;
-}
+  list-style: none;
+ }
 
-.menu-user {
+.menu-user--header {
   margin: 0;
   padding: 0;
-  width: 280px;
+  width: 498px;
   display: flex;
   justify-content: space-between;
   list-style: none;
 }
 
-.menu-user__items {
-  margin: 0;
-  padding: 0;
+.sign {
   width: 280px;
+  margin: 0;
+  margin-right: auto;
+  padding: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   list-style: none;
 }
 
-.menu-user__item {
+.control__item {
   margin-right: 37px;
   padding-left: 25px;
   position: relative;
@@ -238,35 +239,35 @@ a:active {
   line-height: 36px;
 }
 
-.menu-user__item:last-child {
+.control__item:last-child {
   margin-right: 0;
 }
 
-.menu-user__item--search {
+.control__item--search {
   margin-right: auto;
 }
 
-.menu-user__item--profile {
+.control__item--profile {
   margin: 0;
 }
 
-.menu-user__item--logout {
+.control__item--logout {
   padding-left: 20px;
 }
 
-.menu-user__item--logout .menu-user__link {
+.control__item--logout .control__link {
   opacity: 0.3;
 }
 
-.menu-user__item--logout .menu-user__link:hover {
+.control__item--logout .control__link:hover {
   opacity: 0.6;
 }
 
-.menu-user__item--logout .menu-user__link:active {
+.control__item--logout .control__link:active {
   opacity: 1;
 }
 
-.menu-user__item::before {
+.control__item::before {
   content: "";
   position: absolute;
   top: 12px;
@@ -274,7 +275,7 @@ a:active {
   cursor: pointer;
 }
 
-.menu-user__item--search::before {
+.control__item--search::before {
   top: 18px;
   left: 2px;
   width: 16px;
@@ -399,7 +400,7 @@ a:active {
   letter-spacing: 3.5px;
 }
 
-.main-nav_item:last-child {
+.main-nav__item:last-child {
   margin-right: -3px;
   padding-right: 0;
 }
@@ -632,7 +633,7 @@ a:active {
   margin-bottom: 111px;
 }
 
-.popular-slider__parameter-feature {
+.popular-slider__parameter-value {
   width: 160px;
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 36px;
@@ -642,13 +643,13 @@ a:active {
   color: #000;
 }
 
-.popular-slider__item--slide1 .popular-slider__parameter-feature:nth-child(1),
-.popular-slider__item--slide3 .popular-slider__parameter-feature:nth-child(1) {
+.popular-slider__item--slide1 .popular-slider__parameter-value:nth-child(1),
+.popular-slider__item--slide3 .popular-slider__parameter-value:nth-child(1) {
   width: 156px;
 }
 
-.popular-slider__item--slide1 .popular-slider__parameter-feature:nth-child(2),
-.popular-slider__item--slide3 .popular-slider__parameter-feature:nth-child(2) {
+.popular-slider__item--slide1 .popular-slider__parameter-value:nth-child(2),
+.popular-slider__item--slide3 .popular-slider__parameter-value:nth-child(2) {
   width: 135px;
 }
 
@@ -656,6 +657,7 @@ a:active {
   padding: 0;
   padding-top: 8px;
   padding-left: 4px;
+  text-align: left;
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 13px;
   font-weight: 300;
@@ -802,9 +804,9 @@ a:active {
   background-position: right 85px;
 }
 
-#tab1:checked ~ .services__list .services__item--delivery,
-#tab2:checked ~ .services__list .services__item--warranty,
-#tab3:checked ~ .services__list .services__item--credit {
+#tab1:checked ~ .services__items .services__item--delivery,
+#tab2:checked ~ .services__items .services__item--warranty,
+#tab3:checked ~ .services__items .services__item--credit {
   display: block;
 }
 
@@ -863,6 +865,21 @@ a:active {
 	height: 100px;
   background-color: #fff;
   background-repeat: no-repeat;
+  opacity: .3;
+}
+
+.logotypes__link .active {
+	display: none;
+}
+
+.logotypes__link:hover .active {
+	display: block;
+}
+.logotypes__link:hover .noactive {
+	display: none;
+}
+.logotypes__link:hover {
+	opacity: 1;
 }
 
 /* Блок информации */
@@ -1006,8 +1023,6 @@ a:active {
   width: 325px;
   margin: 0;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
   align-items: center;
