@@ -939,14 +939,14 @@ a:active {
   max-width: 475px;
 }
 
-.about__carrier-list {
+.about__partners-items {
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
   list-style: none;
 }
 
-.about__carrier-item {
+.about__partners-item {
   padding-left: 35px;
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 16px;
@@ -956,7 +956,7 @@ a:active {
   position: relative;
 }
 
-.about__carrier-item::before {
+.about__partners-item::before {
   content: "";
   position: absolute;
   top: 15px;
@@ -1008,7 +1008,7 @@ a:active {
   position: relative;
 }
 
-.footer--page .footer__user-menu {
+.footer--catalog .footer__user-menu {
   padding-top: 64px;
 }
 
@@ -1019,7 +1019,7 @@ a:active {
 }
 
 
-.user-menu {
+.user-menu__items {
   width: 325px;
   margin: 0;
   padding: 0;
@@ -1080,7 +1080,7 @@ a:active {
   color: #fff;
 }
 
-.footer__line--middle {
+.footer__info {
   margin-bottom: 57px;
 }
 
@@ -1097,9 +1097,9 @@ a:active {
   text-align: right;
 }
 
-.footer-menu {
+.main-nav--footer .main-nav__items {
   max-width: 700px;
-  padding-top: 2px;
+  padding: 2px 0 0 40px;
   display: flex;
   flex-wrap: wrap;
   margin: 0;
@@ -1108,7 +1108,8 @@ a:active {
   list-style: none;
 }
 
-.footer-menu__item {
+.main-nav--footer .main-nav__item {
+  margin: 0px;
   padding-right: 35px;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
@@ -1118,26 +1119,26 @@ a:active {
   text-align: center;
 }
 
-.footer-menu__item:nth-of-type(2) {
+.main-nav--footer .main-nav__item:nth-of-type(2) {
   padding-right: 33px;
 }
 
-.footer-menu__item:nth-of-type(3) {
+.main-nav--footer .main-nav__item:nth-of-type(3) {
   padding-right: 37px;
 }
 
-.footer-menu__link {
+.main-nav--footer .main-nav__link {
   color: #fff;
   font-size: 18px;
   line-height: 36px;
 }
 
-.footer__line--bottom {
+.footer__social {
   margin: 0 auto;
   padding-bottom: 60px;
 }
 
-.footer__decor {
+.footer__decoration {
   width: 80px;
   height: 7px;
   background-color: #FFC600;
@@ -1163,16 +1164,16 @@ a:active {
   opacity: 0.3;
 }
 
-.btn-tw {
+.social__btn--tw {
   background-image: url("..//img/twitter.svg");
   margin-right: 0;
 }
 
-.btn-insta {
+.social__btn--inst {
   background-image: url("..//img/instagram.svg");
 }
 
-.btn-fb {
+.social__btn--fb {
   background-image: url("..//img/fb.svg");
 }
 
@@ -1193,6 +1194,11 @@ a:active {
 }
 
 /* breadcrumbs */
+.catalog-title {
+  margin-top: 49px;
+  margin-bottom: 14px;
+  padding-left: 60px;
+}
 
 .breadcrumbs {
   padding-left: 60px;
@@ -1232,14 +1238,14 @@ a:active {
 }
 
 
-/* Контент каталога */
+/* Каталог*/
 
-.content--page {
+.content--catalog {
   width: 100%;
   position: relative;
 }
 
-.content--page::before {
+.content--catalog::before {
   content: "";
   width: 100%;
   height: 70px;
@@ -1249,19 +1255,15 @@ a:active {
   z-index: 0;
 }
 
-.page-wrapper {
+.catalog-wrapper {
   width: 1160px;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
 }
 
 .filter,
-.column-right-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.catalog-list {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1313,7 +1315,7 @@ a:active {
   z-index: -5;
 }
 
-.column-right-wrap {
+.catalog-list {
   width: 760px;
   padding-left: 70px;
   margin-right: auto;
@@ -1332,7 +1334,7 @@ a:active {
   z-index: 10;
 }
 
-.sort__criterions {
+.sort__crit {
   margin-left: 22px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1341,7 +1343,7 @@ a:active {
   align-items: center;
 }
 
-.sort__criterions-item {
+.sort__crit-item {
   margin-left: 30px;
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 14px;
@@ -1350,12 +1352,12 @@ a:active {
   opacity: 0.3;
 }
 
-.sort__criterions-item:nth-of-type(2) {
+.sort__crit-item:nth-of-type(2) {
   margin-left: 32px;
 }
 
-.sort__criterions-item--current,
-.sort__criterions-item:active {
+.sort__crit-item--current,
+.sort__crit-item:active {
   opacity: 1;
 }
 
@@ -1399,12 +1401,10 @@ a:active {
 
 /* Лист товаров */
 
-.goods__list {
+.goods__items {
   margin: 0;
   margin-top: 34px;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -1550,14 +1550,14 @@ a:active {
   border-top: 2px solid #000;
 }
 
-.filter__cost-range {
+.filter__range {
   height: 24px;
   margin-top: 27px;
   position: relative;
   cursor: pointer;
 }
 
-.filter__cost-range span {
+.filter__range span {
   position: absolute;
   top: 0;
   width: 4px;
@@ -1576,7 +1576,7 @@ a:active {
   left: 107px;
 }
 
-.filter__cost-range span:hover {
+.filter__range span:hover {
   border: 9px solid #fff;
   top: -1px;
 }
@@ -1628,7 +1628,7 @@ a:active {
   color: rgba(0, 0, 0, 0.2);
 }
 
-.filter__list-options {
+.filter__options {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
@@ -1721,7 +1721,7 @@ a:active {
 
 /* paginator */
 
-.pagination {
+.page-list {
   height: 70px;
   margin-top: 23px;
   margin-bottom: 73px;
@@ -1731,14 +1731,14 @@ a:active {
   background-color: #EBEBEB;
 }
 
-.pagination__number {
+.page-list__number {
   display: flex;
   width: 110px;
   margin-left: 14px;
   justify-content: space-around;
 }
 
-.pagination__item {
+.page-list__item {
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 16px;
@@ -1750,32 +1750,32 @@ a:active {
   cursor: pointer;
 }
 
-.pagination__item--current {
+.page-list__item--current {
   opacity: 1;
 }
 
-.pagination__item--prev,
-.pagination__item--next {
+.page-list__item--prev,
+.page-list__item--next {
   height: 20px;
   padding: 25px 26px 25px 30px;
   opacity: 1;
 }
 
-.pagination__item--prev:hover,
-.pagination__item--next:hover {
+.page-list__item--prev:hover,
+.page-list__item--next:hover {
   background-color: #D9D9D9;
 }
 
-.pagination__item--prev:active,
-.pagination__item--next:active {
+.page-list__item--prev:active,
+.page-list__item--next:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.pagination__item:hover {
+.page-list__item:hover {
   opacity: 0.6;
 }
 
-.pagination__item:active {
+.page-list__item:active {
    opacity: 1;
 }
 

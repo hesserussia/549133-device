@@ -10,29 +10,33 @@
 </head>
 
 <body>
-  <header class="header">
-    <div class="header_logo">
-      <a class="logo logo--catalog">DEVICE</a>
-    </div>
-    <div class="control__item control__item--search">
-      <form action="https://echo.htmlacademy.ru" class="form-search">
-        <label for="search" class="visually-hidden">Поиск по сайту</label>
-        <input id="search" class="form-search__input" type="search" placeholder="Поиск по сайту">
-        <button class="form-search__btn" type="submit">Найти</button>
-      </form>
-    </div>
-    <div class="menu-user menu-user--header">
-      <ul class="menu-user__items">
-        <li class="menu-user__item menu-user__item--profile"><a class="menu-user__link" href="#">Валентин Петухов</a></li>
-        <li class="menu-user__item menu-user__item--logout"><a class="menu-user__link" href="#">Выйти</a></li>
-        <li class="menu-user__item menu-user__item--compare"><a class="menu-user__link" href="#">Сравнить</a></li>
-        <li class="menu-user__item menu-user__item--basket"><a class="menu-user__link" href="#">Корзина</a></li>
-      </ul>
-    </div>
-
-    <nav class="main-nav main-nav--header">
+  <header class="header header--catalog">
+    <a class="logo logo--catalog">DEVICE</a>
+    <ul class="control">
+      <li class="control__item control__item--search">
+        <form action="https://echo.htmlacademy.ru" class="form-search">
+          <label for="search" class="visually-hidden">Поиск по сайту</label>
+          <input id="search" class="form-search__input" type="search" placeholder="Поиск по сайту">
+          <button class="form-search__btn" type="submit">Найти</button>
+        </form>
+      </li>
+      <li>
+        <ul class="menu-user menu-user--header">
+          <li>
+            <ul class="sign">
+              <li class="control__item menu-user__item menu-user__item--profile"><a class="menu-user__link" href="#">Валентин Петухов</a></li>
+              <li class="control__item menu-user__item menu-user__item--logout"><a class="menu-user__link" href="#">Выйти</a></li>
+            </ul>
+          </li>
+          <li class="control__item menu-user__item menu-user__item--compare"><a class="menu-user__link" href="#">Сравнить</a></li>
+          <li class="control__item menu-user__item menu-user__item--backet"><a class="menu-user__link" href="#">Корзина</a></li>
+        </ul>
+      </li>
+    </ul>
+    <nav class="main-nav">
       <ul class="main-nav__items">
-        <li class="main-nav__item catalog"><a class="main-nav__link" href="#">Каталог товаров</a>
+        <li class="main-nav__item catalog">
+          <a class="main-nav__link" href="#">Каталог товаров</a>
           <div class="submenu">
             <ul class="submenu__items">
               <li class="submenu__item"><a class="submenu__link" href="#">Виртуальная реальность</a></li>
@@ -44,24 +48,22 @@
             </ul>
           </div>
         </li>
-
         <li class="main-nav__item"><a class="main-nav__link" href="#">Доставка</a></li>
         <li class="main-nav__item"><a class="main-nav__link" href="#">Гарантия</a></li>
         <li class="main-nav__item"><a class="main-nav__link" href="#">Контакты</a></li>
       </ul>
     </nav>
-  </header>
-
-  <main class="content content--catalog">
-    <h1>Моноподы для селфи</h1>
+    <h1 class="catalog-title title">Моноподы для селфи</h1>
     <div class="breadcrumbs">
       <a href="index.html" class="breadcrumbs__link">Главная</a>
       <a href="#" class="breadcrumbs__link">Каталог товаров</a>
-      <a class="breadcrumbs__current title">Моноподы для селфи</a>
+      <a class="breadcrumbs__current">Моноподы для селфи</a>
     </div>
+  </header>
+  <main class="content--catalog">
     <div class="catalog-wrapper">
       <section class="filter">
-        <h2>Фильтр:</h2>
+        <h2 class="section-title">Фильтр:</h2>
         <form class="filter__form" action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="filter__group filter__group--cost">
             <legend class="filter__name">Стоимость</legend>
@@ -93,11 +95,11 @@
           </fieldset>
           <fieldset class="filter__group filter__group--bluetooth">
             <legend class="filter__name">Bluetooth</legend>
-            <div class="filter__list-options">
-              <input class="filter__radio" type="radio" id="bt-y" name="bt" checked>
-              <label for="btn-yes" class="filter__option" tabindex="0">Есть</label>
-              <input class="filter__radio" type="radio" id="bt-n" name="bt">
-              <label for="btn-no" class="filter__option" tabindex="0">Нет</label>
+            <div class="filter__options">
+              <input class="filter__radio" type="radio" id="bt-yes" name="bt" checked>
+              <label for="bt-yes" class="filter__option" tabindex="0">Есть</label>
+              <input class="filter__radio" type="radio" id="bt-no" name="bt">
+              <label for="bt-no" class="filter__option" tabindex="0">Нет</label>
             </div>
           </fieldset>
           <button class="filter__btn btn" type="submit">Показать</button>
@@ -106,7 +108,7 @@
 
       <section class="catalog-list">
         <div class="sort">
-          <h2 class="title">Сортировка:</h2>
+          <h2 class="section-title">Сортировка:</h2>
           <div class="sort__crit">
             <a class="sort__crit-item sort__crit-item--current " href="#">По цене</a>
             <a class="sort__crit-item" href="#">По типу</a>
@@ -122,12 +124,12 @@
           <h2 class="visually-hidden">Список выбранных товаров</h2>
           <ul class="goods__items">
             <li class="goods__item">
-              <img src="img/product1.jpg" width="100" height="100" alt="Любительская селфи-палка">
+              <p class="goods__item-image">
+                <img class="goods__item-image" src="img/product1.jpg" width="360" height="380" alt="Любительская селфи-палка">
+              </p>
               <div class="goods__item-info">
-                <a href="#">
-                  <h3 class="goods__item-title">Любительская селфи-палка</h3>
-                  <span class="goods__item-price">500 руб.</span>
-                </a>
+                <h3 class="goods__item-title"><a href="#">Любительская селфи-палка</a></h3>
+                <span class="goods__item-price">500 руб.</span>
               </div>
               <div class="goods__item-hover">
                 <a href="#" class="goods__btn btn">В корзину</a>
@@ -135,12 +137,12 @@
               </div>
             </li>
             <li class="goods__item">
-              <img src="img/product2.jpg" width="100" height="100" alt="Профессиональная селфи-палка">
+              <p class="goods__item-image">
+                <img src="img/product2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
+              </p>
               <div class="goods__item-info">
-                <a href="#">
-                  <h3 class="goods__item-title">Профессиональная селфи-палка</h3>
-                  <span class="goods__item-price">1 500 руб.</span>
-                </a>
+                <h3 class="goods__item-title"><a href="#">Профессиональная селфи-палка</a></h3>
+                <span class="goods__item-price">1 500 руб.</span>
               </div>
               <div class="goods__item-hover">
                 <a href="#" class="goods__btn btn">В корзину</a>
@@ -148,25 +150,25 @@
               </div>
             </li>
             <li class="goods__item">
-              <img src="img/product3.jpg" width="100" height="100" alt="Непотопляемая селфи-палка">
+              <p class="goods__item-image">
+                <img src="img/product3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
+              </p>
               <div class="goods__item-info">
-                <a href="#">
-                  <h3 class="goods__item-title">Непотопляемая селфи-палка</h3>
-                  <span class="goods__item-price">2 500 руб.</span>
-                </a>
+                <h3 class="goods__item-title"><a href="#">Непотопляемая селфи-палка</a></h3>
+                <span class="goods__item-price">2 500 руб.</span>
               </div>
               <div class="goods__item-hover">
                 <a href="#" class="goods__btn btn">В корзину</a>
                 <a href="#" class="goods__compare">Добавить к сравнению</a>
               </div>
             </li>
-            <li class="goods__item goods__item--new">
-              <img src="img/product4.jpg" width="100" height="100" alt="Селфи-палка &laquo;Следуй за мной&raquo;">
+            <li class="goods__item">
+              <p class="goods__item-image goods__item-image--new">
+                <img src="img/product4.jpg" width="360" height="380" alt="Селфи-палка &laquo;Следуй за мной&raquo;">
+              </p>
               <div class="goods__item-info">
-                <a href="#">
-                  <h3 class="goods__item-title">Селфи-палка &laquo;Следуй за мной&raquo;</h3>
-                  <span class="goods__item-price">4 900 руб.</span>
-                </a>
+                <h3 class="goods__item-title"><a href="#">Селфи-палка &laquo;Следуй за мной&raquo;</a></h3>
+                <span class="goods__item-price">4 900 руб.</span>
               </div>
               <div class="goods__item-hover">
                 <a href="#" class="goods__btn btn">В корзину</a>
@@ -177,7 +179,7 @@
         </div>
 
         <div class="page-list">
-          <a class="page-list__item pagination__item--prev" href="#">Назад</a>
+          <a class="page-list__item page-list__item--prev" href="#">Назад</a>
           <div class="page-list__number">
             <a class="page-list__item page-list__item--current" href="#">1</a>
             <a class="page-list__item" href="#">2</a>
@@ -191,14 +193,14 @@
   </main>
 
 
-  <footer class="footer">
+  <footer class="footer footer--catalog">
     <div class="footer__user-menu">
-      <a class="footer__logo logo--footer" href="index.html">Device</a>
-      <div class="user-menu user-menu--footer">
+      <a class="logo logo--footer" href="index.html">Device</a>
+      <div class="user-menu">
         <ul class="user-menu__items">
-          <li class="user-menu__item "><a class="user-menu__item__link" href="#">Выйти</a></li>
-          <li class="user-menu__item"><a class="user-menu__item__link" href="#">Сравнить</a></li>
-          <li class="user-menu__item"><a class="user-menu__item__link" href="#">Корзина</a></li>
+          <li class="user-menu__item user-menu__item--logout"><a class="user-menu__link" href="#">Выйти</a></li>
+          <li class="user-menu__item user-menu__item--compare"><a class="user-menu__link" href="#">Сравнить</a></li>
+          <li class="user-menu__item user-menu__item--backet"><a class="user-menu__link" href="#">Корзина</a></li>
         </ul>
       </div>
 
