@@ -1705,12 +1705,10 @@ a:active {
 .goods__item-image--new::before {
   content: "new";
   position: absolute;
-  padding-top: 23px;
-  padding-left: 16px;
-  top: 28px;
-  right: 26px;
-  width: 44px;
-  height: 37px;
+  top: 31px;
+  right: 27px;
+  width: 56px;
+  height: 56px;
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 800;
@@ -1718,6 +1716,8 @@ a:active {
   color: rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 50%;
+  line-height: 56px;
+  text-align: center;
 }
 
 .goods__btn {
