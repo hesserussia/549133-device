@@ -304,23 +304,23 @@ a:active {
   margin-right: auto;
 }
 
-.control__item--profile {
+.menu-user__item--profile {
   margin: 0;
 }
 
-.control__item--logout {
+.menu-user__item--logout {
   padding-left: 20px;
 }
 
-.control__item--logout .control__link {
+.menu-user__item--logout .menu-user__link {
   opacity: 0.3;
 }
 
-.control__item--logout .control__link:hover {
+.menu-user__item--logout .menu-user__link:hover {
   opacity: 0.6;
 }
 
-.control__item--logout .control__link:active {
+.menu-user__item--logout .menu-user__link:active {
   opacity: 1;
 }
 
