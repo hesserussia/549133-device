@@ -854,6 +854,10 @@ a:active {
   letter-spacing: 0.2px;
 }
 
+.catalog-category__name--correction {
+  width: 120px;
+}
+
 /* Сервисы */
 
 .services {
@@ -2082,6 +2086,18 @@ a:active {
       -ms-transform: scale(1);
           transform: scale(1);
   opacity: 1;
+  -webkit-transition: opacity 1s ease-in-out,
+              -webkit-transform 1s ease-in-out 0.2s;
+  transition: opacity 1s ease-in-out,
+              -webkit-transform 1s ease-in-out 0.2s;
+  -o-transition: opacity 1s ease-in-out,
+              transform 1s ease-in-out 0.2s;
+  transition: opacity 1s ease-in-out,
+              transform 1s ease-in-out 0.2s;
+  transition: opacity 1s ease-in-out,
+              transform 1s ease-in-out 0.2s,
+              -webkit-transform 1s ease-in-out 0.2s;
+}
 }
 
 .popup-feedback--error .popup-feedback__field,
